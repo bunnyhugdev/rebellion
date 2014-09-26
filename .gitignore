@@ -52,6 +52,8 @@ temp/
 ._*
 .Trashes
 
+node_modules/
+
 .svn
 
 *.codekit
