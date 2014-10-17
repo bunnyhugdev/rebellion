@@ -85,3 +85,29 @@ h1, h2, h3 {
 .community-tap h3 {
 	text-align: right;
 }
+
+#news-items {
+	li {
+		margin: .5em 0;
+		h4 {
+			margin-bottom: .1em;
+			a {
+				color: $white;
+			}
+		}
+		p {
+			margin-top: 1.3em;
+			font-style: italic;
+		}
+		&:nth-child(n+2) {
+			/* Put a top border on every LI except the first */
+			border-top: 1px solid $dark-primary-color;
+		}
+		time {
+			font-size: .8em;
+			float: right;
+			position: relative;
+			top: -1.8em;
+		}
+	}
+}

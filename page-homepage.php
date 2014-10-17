@@ -42,14 +42,16 @@ if (array_key_exists('top-image', $flds)) {
 								<h3>News / Events</h3>
 								<?php
 								$qry = new WP_Query( array(
-									'posts_per_page' => 5,
+									'posts_per_page' => 3,
 									'post_type' => 'post'
 								) );
 								?>
 								<ul id="news-items">
 									<?php if ( $qry->have_posts() ): while ( $qry->have_posts() ): $qry->the_post(); ?>
 									<li>
-										<a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+										<h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
+										<?php printf( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')) ); ?>
+										<?php the_excerpt(); ?>
 									</li>
 									<?php endwhile; endif; ?>
 								</ul>

@@ -2774,6 +2774,36 @@ h1, h2, h3 {
   text-align: right;
 }
 
+/* line 90, ../../scss/modules/_frontpage.scss */
+#news-items li {
+  margin: .5em 0;
+}
+/* line 92, ../../scss/modules/_frontpage.scss */
+#news-items li h4 {
+  margin-bottom: .1em;
+}
+/* line 94, ../../scss/modules/_frontpage.scss */
+#news-items li h4 a {
+  color: #fff;
+}
+/* line 98, ../../scss/modules/_frontpage.scss */
+#news-items li p {
+  margin-top: 1.3em;
+  font-style: italic;
+}
+/* line 102, ../../scss/modules/_frontpage.scss */
+#news-items li:nth-child(n+2) {
+  /* Put a top border on every LI except the first */
+  border-top: 1px solid #680000;
+}
+/* line 106, ../../scss/modules/_frontpage.scss */
+#news-items li time {
+  font-size: .8em;
+  float: right;
+  position: relative;
+  top: -1.8em;
+}
+
 /* line 1, ../../scss/modules/_locator.scss */
 .locator {
   text-align: center;

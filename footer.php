@@ -28,9 +28,9 @@
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
-<script src='//172.16.1.73:3000/socket.io/socket.io.js'></script>
-<script>var ___socket___ = io.connect('http://172.16.1.73:3000');</script>
-<script src='//172.16.1.73:3001/client/browser-sync-client.0.8.2.js'></script>
+<script src='//192.168.102.106:3000/socket.io/socket.io.js'></script>
+<script>var ___socket___ = io.connect('http://192.168.102.106:3000');</script>
+<script src='//192.168.102.106:3001/client/browser-sync-client.0.8.2.js'></script>
 	</body>
 
 </html> <!-- end of site. what a ride! -->
