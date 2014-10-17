@@ -1,0 +1,87 @@
+h1, h2, h3 {
+	text-align: center;
+	font-family: $outage;
+	color: $dark-primary-color;
+}
+
+@media (min-width: 1029px) {
+	h1 {
+		font-size: 4em;
+	}
+	h3 {
+		font-size: 1.25em;
+	}
+}
+
+#main {
+	background-size: cover;
+	background-attachment: fixed;
+	#top {
+		#scroll-down-arrow {
+			position: absolute;
+			left: 45%;
+			margin-top: 50px;
+			width: 10%;
+			text-align: center;
+			font-size: 8em;
+			color: $primary-brand-color;
+			opacity: .6;
+		}
+	}
+}
+
+#midline {
+	background-color: $primary-brand-color;
+	color: $white;
+}
+@media (max-width: 768px) {
+	#midline > div:nth-child(-n+2) .midline-box {
+		border-bottom: 1px solid $dark-primary-color;
+	}
+}
+@media (min-width: 768px) {
+	#midline > div:nth-child(-n+2) .midline-box {
+		border-right: 2px solid $dark-primary-color;
+	}
+}
+.midline-box {
+	margin: .5em 0;
+	padding: 1em 2em;
+}
+
+#social-links {
+	text-align: center;
+	li {
+		display: inline;
+		margin: 10px 20px;
+		a {
+			color: $white;
+		}
+	}
+}
+
+.content-box {
+	margin: 0 2em;
+	.bio-pic {
+		text-align: center;
+	}
+}
+
+#brewers-section {
+	background-image: url(../images/brewers-bg.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.content-box {
+		background-color: $white;
+		opacity: .9;
+		border-radius: 8px;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+}
+
+.community-tap,
+.community-tap h3 {
+	text-align: right;
+}

@@ -13,6 +13,33 @@
 */
 
 
+(function($,sr){
+	// debouncing function from John Hann
+	// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+
+	var debounce = function (func, threshold, execAsap) {
+		var timeout;
+
+		return function debounced () {
+			var obj = this, args = arguments;
+			function delayed () {
+				if (!execAsap)
+					func.apply(obj, args);
+				timeout = null;
+			};
+
+			if (timeout)
+				clearTimeout(timeout);
+			else if (execAsap)
+				func.apply(obj, args);
+
+			timeout = setTimeout(delayed, threshold || 100);
+		};
+	}
+	// smartresize
+	jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+})(jQuery,'smartresize');
+
 /*
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
@@ -101,17 +128,87 @@ function loadGravatars() {
 	}
 } // end function
 
-
+// scripts for the home page
+function setHeaderScrollClass() {
+	var scrollTop = jQuery(window).scrollTop();
+	if (scrollTop > 200 || jQuery(window).width() < 700) {
+		jQuery('#logo').addClass('minimized');
+	} else {
+		jQuery('#logo').removeClass('minimized');
+	}
+}
+var topOffset = (jQuery('body').hasClass('admin-bar')) ? 32 : 0;
+function setHomeBackgroundHeight() {
+	var windowHeight = jQuery(window).height() - topOffset;
+	jQuery('#front-content #main').height(windowHeight);
+}
+function centerHomeText() {
+	var txt = jQuery('#top');
+	var txtTop = (jQuery('#front-content #main').actual('height') / 2) - (jQuery('#top').actual('height') / 2);
+	txt.css('margin-top', txtTop + 'px');
+	txt.show();
+}
+function getWindowWidth() {
+	if (window.innerWidth) {
+		return window.innerWidth;
+	}
+	// excludes scroll bars which makes some difficult edge cases around break
+	// points.
+	return jQuery(window).width();
+}
+function setBoxHeights(selector) {
+	jQuery(selector).css("height", "");
+	if ( getWindowWidth() <= 767 ) { return; }
+	var max = 0;
+	jQuery(selector).each(function() {
+		var h = jQuery(this).actual('outerHeight');
+		if (h > max) {
+			max = h;
+		}
+	});
+	jQuery(selector).css( "height", max );
+}
+function scaleMenuIcon() {
+	var icon = jQuery('#toggle-nav');
+	var height = icon.parent().actual('height');
+	icon.height(height).width(height);
+}
+function setTopMarginImmediate() {
+	var $head = jQuery('#inner-header');
+	var top = $head.position().top + $head.actual('height');
+	jQuery('#content').css('padding-top', (top + 5) + 'px');
+}
+function setTopMarginDelay() {
+	window.setTimeout(setTopMarginImmediate, 510); // 510 because the tranistion is .5s
+}
 /*
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
-
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
-
-
+	$('#toggle-nav').sidr({
+		name: 'menu-mainnav',
+		side: 'right'
+	});
+	// HACK to add display: none to sidr element otherwise first click does nothing
+	$('#menu-mainnav').css('display', 'none');
+	setHeaderScrollClass();
+	setTopMarginImmediate();
+	setBoxHeights('.midline-box');
+	$(window).smartresize(function() {
+		setHeaderScrollClass();
+		setHomeBackgroundHeight();
+		setTopMarginDelay();
+		centerHomeText();
+		setBoxHeights('.midline-box');
+		setBoxHeights('#brewers-section .content-box');
+	});
+	$(window).scroll(function() {
+		setHeaderScrollClass();
+		setTopMarginDelay();
+	});
+	$('#content').imagesLoaded(function() {
+		setHomeBackgroundHeight();
+		centerHomeText();
+		setBoxHeights('#brewers-section .content-box');
+	});
 }); /* end of as page load scripts */

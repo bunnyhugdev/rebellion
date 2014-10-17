@@ -1,0 +1,38 @@
+.locator {
+	text-align: center;
+	form {
+		max-width: 450px;
+		margin: 0 auto;
+		padding: .5em;
+	}
+	.address-search {
+		input {
+			display: inline-block;
+			width: 75%;
+			opacity: 0.6;
+			&:focus {
+				opacity: 1;
+				@include transition(background-color 0.4s ease-in-out);
+			}
+		}
+		button {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			margin-bottom: 14px;
+			width: 25%; 
+			opacity: 0.6;
+		}
+	}
+	.current-location {
+		button {
+			max-width: 430px;
+			width: 100%;
+			opacity: 0.6;
+			
+		}
+	}
+	.primary-btn:hover {
+		opacity: 1;
+  		@include transition(background-color 0.4s ease-in-out);
+	}
+}

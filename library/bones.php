@@ -134,21 +134,35 @@ function bones_scripts_and_styles() {
 		// register main stylesheet
 		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
+
 		// ie-only style sheet
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
-    }
+		// sidr stylesheet
+		wp_register_style( 'jquery.sidr', get_stylesheet_directory_uri() . '/library/css/jquery.sidr.dark.css', array(), '' );
+
+		// font-awesome stylesheet
+		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', array(), '' );
+
+		// comment reply script for threaded comments
+		if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+			  wp_enqueue_script( 'comment-reply' );
+		}
 
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'imagesLoaded', get_stylesheet_directory_uri() . '/library/js/libs/imagesloaded.pkgd.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'jquery.actual', get_stylesheet_directory_uri() . '/library/js/libs/jquery.actual.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'jquery.placeholder', get_stylesheet_directory_uri() . '/library/js/libs/jquery.placeholder.js', array( 'jquery' ), '', true );
+		wp_register_script( 'jquery.sidr', get_stylesheet_directory_uri() . '/library/js/libs/jquery.sidr.js', array( 'jquery' ), '', true );
+		wp_register_script( 'prod-js', get_stylesheet_directory_uri() . '/library/js/main.min.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
+		wp_enqueue_style( 'jquery.sidr' );
+		wp_enqueue_style( 'font-awesome' );
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
@@ -158,8 +172,14 @@ function bones_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
+		/* FOR DEV ONLY
+		wp_enqueue_script( 'imagesLoaded' );
+		wp_enqueue_script( 'jquery.actual' );
+		wp_enqueue_script( 'jquery.placeholder' );
+		wp_enqueue_script( 'jquery.sidr' );
 		wp_enqueue_script( 'bones-js' );
-
+		*/
+		wp_enqueue_script( 'prod-js');
 	}
 }
 
@@ -193,6 +213,7 @@ function bones_theme_support() {
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 
 	// adding post format support
+	/* Dont need any special post formats at this time
 	add_theme_support( 'post-formats',
 		array(
 			'aside',             // title less blurb
@@ -206,6 +227,7 @@ function bones_theme_support() {
 			'chat'               // chat transcript
 		)
 	);
+	*/
 
 	// wp menus
 	add_theme_support( 'menus' );
@@ -213,8 +235,8 @@ function bones_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'rebelliontheme' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'rebelliontheme' ) // secondary nav in footer
 		)
 	);
 } /* end bones theme support */
@@ -244,7 +266,7 @@ function bones_related_posts() {
 				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</li>'; ?>
+			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'rebelliontheme' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
@@ -289,7 +311,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'rebelliontheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'rebelliontheme' ) .'</a>';
 }
 
 

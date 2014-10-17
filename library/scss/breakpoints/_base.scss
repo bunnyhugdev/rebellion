@@ -16,11 +16,12 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $montserrat;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
 	background-color: $gray;
+	margin-top: -24px; // not sure why I have to do this but for the header to work I do
   -webkit-font-smoothing: antialiased;
 }
 
@@ -126,8 +127,8 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
+	font-size: 2em;
+	line-height: 1.5em;
 	margin-bottom: 0.375em;
 }
 
@@ -250,7 +251,7 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
+#front-content, #content {
 	margin-top: 1.5em;
 }
 
@@ -733,7 +734,7 @@ COMMENT STYLES
 
 	/* comment reply link */
 	.comment-reply-link {
-		@extend .blue-btn;
+		@extend %btn;
 		font-size: 0.9em;
 		float: right;
 
@@ -789,7 +790,7 @@ COMMENT FORM STYLES
 
 	/* comment submit button */
 	#submit {
-		@extend .blue-btn;
+		@extend %btn;
 		float: right;
 		font-size: 1em;
 	}
@@ -861,7 +862,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+	background-color: $dark-primary-color;
 	color: $light-gray;
 }
 
@@ -886,3 +887,23 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+/**********************
+UTILITY RESPONSIVE CLASSES
+**********************/
+.hide-tiny {
+	@media (max-width: 767px) {
+		display: none;
+	}
+	@media (min-width: 767px) {
+		display: initial;
+	}
+}
+.show-tiny {
+	@media (max-width: 767px) {
+		display: initial;
+	}
+	@media (min-width: 767px) {
+		display: none;
+	}
+}

@@ -14,7 +14,7 @@ if ( post_password_required() ) {
 
   <?php if ( have_comments() ) : ?>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
+    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'rebelliontheme' ), __( '<span>One</span> Comment', 'rebelliontheme' ), __( '<span>%</span> Comments', 'rebelliontheme' ) );?></h3>
 
     <section class="commentlist">
       <?php
@@ -35,13 +35,13 @@ if ( post_password_required() ) {
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
     	<nav class="navigation comment-navigation" role="navigation">
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'bonestheme' ) ); ?></div>
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'bonestheme' ) ); ?></div>
+      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'rebelliontheme' ) ); ?></div>
+      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'rebelliontheme' ) ); ?></div>
     	</nav>
     <?php endif; ?>
 
     <?php if ( ! comments_open() ) : ?>
-    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'bonestheme' ); ?></p>
+    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'rebelliontheme' ); ?></p>
     <?php endif; ?>
 
   <?php endif; ?>

@@ -1,0 +1,29 @@
+#logo {
+	text-align: left;
+	font-family: $outage;
+	@include transition(.5s);
+	&.minimized {
+		margin: 0.25em 0;
+		font-size: 1.5em;
+	}
+	#brand {
+		margin-left: 1em;
+		padding-left: 2.5em;
+		background-image: url(../images/rebellion-white-logo.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	@media (max-width: 1029px) {
+		font-size: 2.0em;
+	}
+} 
+
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+#nav-container {
+	text-align: right;
+}

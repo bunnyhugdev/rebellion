@@ -10,9 +10,7 @@ sidebars, comments, ect.
 
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
-
-// USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-require_once( 'library/custom-post-type.php' );
+require_once( 'library/rebel-custom-post-types.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
@@ -28,7 +26,7 @@ function bones_ahoy() {
   add_editor_style();
 
   // let's get language support going, if you need it
-  load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
+  load_theme_textdomain( 'rebelliontheme', get_template_directory() . '/library/translation' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -119,8 +117,8 @@ new image size.
 function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
+		'name' => __( 'Sidebar 1', 'rebelliontheme' ),
+		'description' => __( 'The first (primary) sidebar.', 'rebelliontheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -137,8 +135,8 @@ function bones_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'bonestheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
+		'name' => __( 'Sidebar 2', 'rebelliontheme' ),
+		'description' => __( 'The second (secondary) sidebar.', 'rebelliontheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -175,13 +173,13 @@ function bones_comments( $comment, $args, $depth ) {
         ?>
         <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
         <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
+        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'rebelliontheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'rebelliontheme' ),'  ','') ) ?>
+        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'rebelliontheme' )); ?> </a></time>
 
       </header>
       <?php if ($comment->comment_approved == '0') : ?>
         <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'bonestheme' ) ?></p>
+          <p><?php _e( 'Your comment is awaiting moderation.', 'rebelliontheme' ) ?></p>
         </div>
       <?php endif; ?>
       <section class="comment_content cf">
@@ -193,7 +191,6 @@ function bones_comments( $comment, $args, $depth ) {
 <?php
 } // don't remove this bracket!
 
-
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some
@@ -202,12 +199,19 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
   wp_enqueue_style( 'googleFonts');
 }
 
 add_action('wp_print_styles', 'bones_fonts');
 
+/*
+Add some customizable properties to our theme
+*/
+function rebelliontheme_customize( $wp_customize ) {
+  //$wp_customize->add_setting();
+}
+add_action( 'customize_register', 'rebelliontheme_customize' );
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
