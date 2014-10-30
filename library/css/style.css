@@ -2600,6 +2600,20 @@ h3 {
 	display: inline-block;
 }
 
+/* line 10, ../../scss/modules/_posts.scss */
+
+.map-container {
+	height: 400px;
+}
+
+/* line 13, ../../scss/modules/_posts.scss */
+
+#location-map {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
 
 /******************************************************************
