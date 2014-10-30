@@ -19,7 +19,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<div id="main" class="m-all cf" role="main">
 
 							<?php $args = array( 'post_type' => 'post', 'posts_per_page' => 20 );
 							$loop = new WP_Query( $args );
@@ -32,7 +32,8 @@
 									<h2 class="page-title"><?php the_title(); ?></h2>
 
 									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'rebelliontheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+										<?php printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'rebelliontheme' ),
+														get_the_time('Y-m-j'), get_the_time(get_option('date_format'))); ?>
 									</p>
 
 
@@ -64,8 +65,6 @@
 							<?php endif; ?>
 
 						</div>
-
-						<?php get_sidebar(); ?>
 
 				</div>
 

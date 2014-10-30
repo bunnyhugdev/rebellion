@@ -2761,42 +2761,50 @@ h1, h2, h3 {
 }
 /* line 75, ../../scss/modules/_frontpage.scss */
 #brewers-section .content-box {
-  background-color: #fff;
-  opacity: .9;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   padding: 1em;
   margin-bottom: 1em;
 }
+/* line 80, ../../scss/modules/_frontpage.scss */
+#brewers-section .content-box h3 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 10em;
+  background-position: center;
+  font-size: 2em;
+  color: #9b0000;
+}
 
-/* line 84, ../../scss/modules/_frontpage.scss */
+/* line 91, ../../scss/modules/_frontpage.scss */
 .community-tap,
 .community-tap h3 {
   text-align: right;
 }
 
-/* line 90, ../../scss/modules/_frontpage.scss */
+/* line 97, ../../scss/modules/_frontpage.scss */
 #news-items li {
   margin: .5em 0;
 }
-/* line 92, ../../scss/modules/_frontpage.scss */
+/* line 99, ../../scss/modules/_frontpage.scss */
 #news-items li h4 {
   margin-bottom: .1em;
 }
-/* line 94, ../../scss/modules/_frontpage.scss */
+/* line 101, ../../scss/modules/_frontpage.scss */
 #news-items li h4 a {
   color: #fff;
 }
-/* line 98, ../../scss/modules/_frontpage.scss */
+/* line 105, ../../scss/modules/_frontpage.scss */
 #news-items li p {
   margin-top: 1.3em;
   font-style: italic;
 }
-/* line 102, ../../scss/modules/_frontpage.scss */
+/* line 109, ../../scss/modules/_frontpage.scss */
 #news-items li:nth-child(n+2) {
   /* Put a top border on every LI except the first */
   border-top: 1px solid #680000;
 }
-/* line 106, ../../scss/modules/_frontpage.scss */
+/* line 113, ../../scss/modules/_frontpage.scss */
 #news-items li time {
   font-size: .8em;
   float: right;
@@ -2855,6 +2863,6 @@ h1, h2, h3 {
 .beer-stat .beer-stat-label {
   font-weight: bolder;
   margin-right: .5em;
-  width: 7em;
+  width: 10em;
   display: inline-block;
 }

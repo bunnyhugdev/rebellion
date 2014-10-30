@@ -85,43 +85,35 @@ if (array_key_exists('top-image', $flds)) {
 						</div>
 						<div class='cf'></div>
 					</div>
+					<?php
+					/* the meta tag will only display bios where 'front-page' is checked */
+					$brewers = new WP_Query( array(
+						'post_type' => 'bio_type',
+						'posts_per_page' => 5,
+						'meta_key' => 'front_page',
+						'meta_value' => 'a:1',
+						'meta_compare' => 'LIKE'
+					));
+					if ( $brewers->have_posts() ):
+						$cls = sprintf( 't-1of%1$d d-1of%1$d m-all', $brewers->post_count );
+					?>
 					<div id="brewers-section" class="cf">
 						<h1>The Brewers</h1>
-						<div class="t-1of2 d-1of2 m-all">
+						<?php while ( $brewers->have_posts() ): $brewers->the_post(); ?>
+						<div class="<?php echo $cls; ?>">
 							<div class='content-box'>
-								<div class='bio-pic'><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/jamie-bio.png"></div>
-								<h3>Jamie Singer</h3>
-								<p>Born and raised in Regina, Jamie began brewing in the mid-nineties. Shortly after that, he started
-								destroying the competition in homebrew events.</p>
-								<p>An uncompromising perfectionist, Jamie has an encyclopedic knowledge about beer and brew culture.
-								He's been a dedicated member of Regina's brewing community for more than fifteen years. A former
-								President of the ALES club, an award-winning homebrewer and an assistant brewer at Bushwakker are
-								testament to his commitment to great beer.</p>
-								<p>Jamie is an unrepentant hop-head in pursuit of the most delicious, hoppy beer but he admits he's also
-								into barrel-aged beer, Flemish reds and sour beers.</p>
-								<p>In his down time, Jamie and his ever-patient wife, Leann, take "beer-cations" - touring breweries across
-								North America in pursuit of the perfect pint.</p>
+								<?php
+									$img_id = get_post_thumbnail_id();
+									$img_src = wp_get_attachment_image_src($img_id, 'medium')[0];
+								?>
+								<h3 style="background-image: url(<?php echo $img_src; ?>);"><?php echo get_the_title(); ?></h3>
+								<?php the_content(); ?>
 							</div>
 						</div>
-						<div class="t-1of2 d-1of2 m-all">
-							<div class='content-box'>
-								<div class='bio-pic'><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/mark-bio.png"></div>
-								<h3>Mark Heise</h3>
-								<p>If someone ever says, “Did you hear about that Canadian guy who won all those medals in the
-								homebrew competition?” they’re probably talking about Mark.</p>
-								<p>He discovered his passion for craft beer in the early aughts and entered his first competition in 2006,
-								coming in second place to our very own Jaime Singer. After that, they became fast-friends. Mark was
-								hooked and brewing beer became his obsession. He’s since filled his shelves with gold medals and home
-								brew accolades from across North America.</p>
-								<p>Mark is also a certified beer judge and an integral part of the brewing community, training new judges,
-								giving public speeches, writing extensively and proud to say he’s had a hand helping professional
-								brewers from Halifax to California develop new recipes.</p>
-								<p>He and his wife Joanne both love great beer, punk rock and country music, and real BBQ. Their favourite
-								destination to enjoy all of the above is Austin TX.</p>
-							</div>
-						</div>
+						<?php endwhile; ?>
 						<div class="cf"></div>
 					</div>
+					<?php endif; ?>
 					<div class='beer-culture'>
 						<h1>We Support Local Brewers</h1>
 						<div class="t-2of3 d-2of3 m-all">
