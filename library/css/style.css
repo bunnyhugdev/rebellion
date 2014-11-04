@@ -2602,12 +2602,6 @@ h3 {
 
 /* line 10, ../../scss/modules/_posts.scss */
 
-.map-container {
-	height: 400px;
-}
-
-/* line 13, ../../scss/modules/_posts.scss */
-
 #location-map {
 	height: 100%;
 	margin: 0;

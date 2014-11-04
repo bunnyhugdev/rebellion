@@ -24,12 +24,12 @@ if (array_key_exists('top-image', $flds)) {
 						<div id="top">
 							<h1><?php bloginfo( 'description' ); ?></h1>
 							<div class="locator">
-								<form method="GET" action="#">
+								<form method="GET" action="<?php echo get_site_url() . '/location/';?>">
 									<div class="address-search">
-										<input placeholder="Enter an address" type='text'><button class='primary-btn'>Find</button>
+										<input name="location" placeholder="Enter an address" type='text'><button class='primary-btn'>Find</button>
 									</div>
 									<div class="current-location">
-										<button class='primary-btn'>Use my current location</button>
+										<button type="button" class='primary-btn'>Use my current location</button>
 									</div>
 								</form>
 							</div>
@@ -137,4 +137,9 @@ if (array_key_exists('top-image', $flds)) {
 					</div>
 				</div>
 			</div>
+			<script type='text/javascript'>
+				jQuery('.current-location button').click(function() {
+					window.location = '<?php echo get_site_url() . '/location/'; ?>';
+				});
+			</script>
 <?php get_footer(); ?>
