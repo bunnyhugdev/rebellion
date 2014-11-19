@@ -14,18 +14,12 @@
 ?>
 
 <?php get_header(); ?>
-
 			<div id="content">
-
 				<div id="inner-content" class="wrap cf">
-
 						<div id="main" class="m-all map-container cf" role="main">
 							<div id="location-map"></div>
-
 						</div>
-
 				</div>
-
 			</div>
 			<script type="text/javascript"
       	src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyDMLZOSsRy4Or2dxcz1Mco-FMCSkap2BHI">
