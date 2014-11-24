@@ -56,7 +56,8 @@
 					}
 					function finishInitMap(center) {
 						var locations = [], infoContents = {}, tmpPos, tmpDist, tmpMarker,
-								infoWindow = new google.maps.InfoWindow();
+								infoWindow = new google.maps.InfoWindow(),
+								stripSpaceRegex = /\+/g;
 						<?php $args = array( 'post_type' => 'location_type', 'nopaging' => true );
 						$loop = new WP_Query( $args );
 						if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
@@ -72,13 +73,16 @@
 								title: '<?php echo get_the_title(); ?>'
 							});
 							infoContents[tmpPos] = {
-								title: '<?php echo get_the_title(); ?>',
-								content: '<?php echo get_the_content(); ?>',
+								title: '<?php echo urlencode( get_the_title() ); ?>',
+								content: '<?php echo urlencode( get_the_content() ); ?>',
 								marker: tmpMarker
 							};
 							google.maps.event.addListener(tmpMarker, 'click', function(evt) {
 								var pl = infoContents[evt.latLng];
-								infoWindow.setContent('<h4>' + pl.title + '</h4> ' + pl.content);
+								infoWindow.setContent('<h4>' +
+									decodeURIComponent(pl.title).replace(stripSpaceRegex, ' ') +
+									'</h4> ' +
+									decodeURIComponent(pl.content).replace(stripSpaceRegex, ' '));
 								infoWindow.setPosition(evt.latLng);
 								infoWindow.open(map, pl.marker);
 							});
