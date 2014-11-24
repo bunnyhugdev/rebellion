@@ -24,7 +24,7 @@ if (array_key_exists('top-image', $flds)) {
 						<div id="top">
 							<h1><?php bloginfo( 'description' ); ?></h1>
 							<div class="locator">
-								<form method="GET" action="<?php echo get_site_url() . '/location/';?>">
+								<form method="GET" action="<?php echo get_site_url() . '/locations/';?>">
 									<div class="address-search">
 										<input name="location" placeholder="Enter an address" type='text'><button class='primary-btn'>Find</button>
 									</div>
