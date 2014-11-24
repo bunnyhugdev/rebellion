@@ -139,7 +139,7 @@ if (array_key_exists('top-image', $flds)) {
 			</div>
 			<script type='text/javascript'>
 				jQuery('.current-location button').click(function() {
-					window.location = '<?php echo get_site_url() . '/location/'; ?>';
+					window.location = '<?php echo get_site_url() . '/locations/'; ?>';
 				});
 			</script>
 <?php get_footer(); ?>
