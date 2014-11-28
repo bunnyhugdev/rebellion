@@ -2873,3 +2873,14 @@ h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
+
+/* line 3, ../../scss/modules/_widgets.scss */
+.widget_post_category_widget ul li h4 {
+  color: #680000;
+  margin: 0;
+}
+/* line 7, ../../scss/modules/_widgets.scss */
+.widget_post_category_widget ul li p {
+  margin: 0;
+  margin-left: .5em;
+}

@@ -7,7 +7,8 @@ This theme is being designed and built for the Rebellion Brewing Company of Regi
 ### Frontpage
 - Frontpage images are hard coded
 - Social Icons are hard coded
-- Contact Us, We Support... and Community tap all hardcoded
+- Contact Us hardcoded
+- News / Events, title can overlap date & do we want to include community tap there?
 
 ### Brews
 - Text wraps on brews page for the custom attributes like food pairing Add custom markers to maps

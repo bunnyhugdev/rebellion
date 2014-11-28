@@ -114,27 +114,7 @@ if (array_key_exists('top-image', $flds)) {
 						<div class="cf"></div>
 					</div>
 					<?php endif; ?>
-					<div class='beer-culture'>
-						<h1>We Support Local Brewers</h1>
-						<div class="t-2of3 d-2of3 m-all">
-							<div class="content-box">
-								<p>We're committed to supporting the local home brew community through various home brew events,
-								including tastings, beer competitions, tours, sourcing rare ingredients and more.</p>
-								<p>We find the best home brewers in the Regina area and invite them to brew with us, featuring their
-								recipes on our taps. We're proud to show off the flavours and talent of Saskatchewan home brewers.</p>
-							</div>
-						</div>
-						<div class="t-1of3 d-1of3 m-all">
-							<div class="content-box community-tap">
-								<h3>Community Tap</h3>
-								<ul>
-									<li>Dave Hanna's Imperial Brown Ale</li>
-									<li>Rick August's American Pale Ale</li>
-								</ul>
-							</div>
-						</div>
-						<div class="cf"></div>
-					</div>
+					<?php get_sidebar( 'bottom' ); ?>
 				</div>
 			</div>
 			<script type='text/javascript'>

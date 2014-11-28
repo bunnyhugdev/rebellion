@@ -15,6 +15,8 @@ require_once( 'library/rebel-custom-post-types.php' );
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
 
+require_once( 'rebellion_widgets.php' );
+
 /*********************
 LAUNCH BONES
 Let's get everything up and running.
@@ -115,6 +117,7 @@ new image size.
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
+  register_widget( 'Post_Category_Widget' );
 	register_sidebar(array(
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'rebelliontheme' ),
@@ -124,6 +127,17 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+
+  register_sidebar(array(
+    'id' => 'sidebar-bottom',
+    'name' => __( 'Sidebar Bottom', 'rebelliontheme' ),
+    'description' => __( 'The bottom content on the frontpage.', 'rebelliontheme' ),
+    'before_widget' => '<div id="%1$s" class="t-1of2 d-1of2 m-all %2$s"><div class="content-box">',
+    'after_widget' => '</div></div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  ));
+
 
 	/*
 	to add more sidebars or widgetized areas, just copy

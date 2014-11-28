@@ -2608,6 +2608,20 @@ h3 {
 	padding: 0;
 }
 
+/* line 3, ../../scss/modules/_widgets.scss */
+
+.widget_post_category_widget ul li h4 {
+	color: #680000;
+	margin: 0;
+}
+
+/* line 7, ../../scss/modules/_widgets.scss */
+
+.widget_post_category_widget ul li p {
+	margin: 0;
+	margin-left: .5em;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
 
 /******************************************************************
