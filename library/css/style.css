@@ -2597,16 +2597,19 @@ h3 {
 	-o-transition: background-color 0.4s ease-in-out;
 }
 
+/* line 1, ../../scss/modules/_posts.scss */
+
+.beer-stat {
+	margin-bottom: .5em;
+}
+
 /* line 2, ../../scss/modules/_posts.scss */
 
 .beer-stat .beer-stat-label {
 	font-weight: bolder;
-	margin-right: .5em;
-	width: 10em;
-	display: inline-block;
 }
 
-/* line 10, ../../scss/modules/_posts.scss */
+/* line 8, ../../scss/modules/_posts.scss */
 
 #location-map {
 	height: 100%;

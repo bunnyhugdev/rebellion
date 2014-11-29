@@ -60,8 +60,9 @@ $stat_keys = array(
 												if ( count( $val ) > 0 ) {
 													$v = trim( join( '', $val ) );
 													if ( strlen( $v ) > 0 ) {
-														echo '<div class="beer-stat"><span class="beer-stat-label">' . $stat_keys[$key];
-														echo '</span>' . join(', ', $val) . '</div>';
+														echo '<div class="beer-stat"><div class="beer-stat-label t-1of4 d-1of4 m-all">' . $stat_keys[$key];
+														echo '</div><div class="t-3of4 d-3of4 mall">' . join(', ', $val) . '</div>';
+														echo '<div class="cf"></div></div>';
 													}
 												}
 											}
