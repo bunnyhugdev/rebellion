@@ -43,7 +43,8 @@ if (array_key_exists('top-image', $flds)) {
 								<?php
 								$qry = new WP_Query( array(
 									'posts_per_page' => 3,
-									'post_type' => 'post'
+									'post_type' => 'post',
+									'cat' => '-3'
 								) );
 								?>
 								<ul id="news-items">
