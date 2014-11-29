@@ -9,18 +9,26 @@
 <?php get_header(); ?>
 <?php
 $flds = get_post_custom();
-$imgUrl = NULL;
+$topImgUrl = NULL;
+$brewersImgUrl = NULL;
 if (array_key_exists('top-image', $flds)) {
 	$topImage = $flds['top-image'];
 	if (count($topImage) >= 1) {
-		$imgUrl = get_site_url() . $topImage[0];
+		$topImgUrl = get_site_url() . $topImage[0];
 	}
 }
+if (array_key_exists('brewers-image', $flds)) {
+	$brewersImage = $flds['brewers-image'];
+	if (count($brewersImage) >= 1) {
+		$brewersImgUrl = get_site_url() . $brewersImage[0];
+	}
+}
+
 ?>
 			<div id="front-content">
 				<div id="inner-content" class="cf">
 					<div id="main" class="m-all cf frontpage"
-							role="main" <?php if (!is_null($imgUrl)) echo 'style="background-image: url(' . $imgUrl . ');"'; ?>>
+							role="main" <?php if (!is_null($topImgUrl)) echo 'style="background-image: url(' . $topImgUrl . ');"'; ?>>
 						<div id="top">
 							<h1><?php bloginfo( 'description' ); ?></h1>
 							<div class="locator">
@@ -98,7 +106,7 @@ if (array_key_exists('top-image', $flds)) {
 					if ( $brewers->have_posts() ):
 						$cls = sprintf( 't-1of%1$d d-1of%1$d m-all', $brewers->post_count );
 					?>
-					<div id="brewers-section" class="cf">
+					<div id="brewers-section" class="cf" <?php if (!is_null($brewersImgUrl)) echo 'style="background-image: url(' . $brewersImgUrl . ');"'; ?>>
 						<h1>The Brewers</h1>
 						<?php while ( $brewers->have_posts() ): $brewers->the_post(); ?>
 						<div class="<?php echo $cls; ?>">

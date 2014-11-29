@@ -2458,13 +2458,12 @@ h3 {
 /* line 70, ../../scss/modules/_frontpage.scss */
 
 #brewers-section {
-	background-image: url(../images/brewers-bg.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-/* line 75, ../../scss/modules/_frontpage.scss */
+/* line 74, ../../scss/modules/_frontpage.scss */
 
 #brewers-section .content-box {
 	background-color: rgba(255, 255, 255, 0.8);
@@ -2473,7 +2472,7 @@ h3 {
 	margin-bottom: 1em;
 }
 
-/* line 80, ../../scss/modules/_frontpage.scss */
+/* line 79, ../../scss/modules/_frontpage.scss */
 
 #brewers-section .content-box h3 {
 	background-repeat: no-repeat;
@@ -2484,38 +2483,38 @@ h3 {
 	color: #9b0000;
 }
 
-/* line 91, ../../scss/modules/_frontpage.scss */
+/* line 90, ../../scss/modules/_frontpage.scss */
 
 .community-tap,
 .community-tap h3 {
 	text-align: right;
 }
 
-/* line 97, ../../scss/modules/_frontpage.scss */
+/* line 96, ../../scss/modules/_frontpage.scss */
 
 #news-items li {
 	margin: .5em 0;
 }
 
-/* line 99, ../../scss/modules/_frontpage.scss */
+/* line 98, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 {
 	margin-bottom: .1em;
 }
 
-/* line 101, ../../scss/modules/_frontpage.scss */
+/* line 100, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a {
 	color: #fff;
 }
 
-/* line 103, ../../scss/modules/_frontpage.scss */
+/* line 102, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a:hover {
 	color: #e8e8e8;
 }
 
-/* line 108, ../../scss/modules/_frontpage.scss */
+/* line 107, ../../scss/modules/_frontpage.scss */
 
 #news-items li p {
 	margin-top: 0.2em;
@@ -2523,13 +2522,13 @@ h3 {
 	font-size: 0.9em;
 }
 
-/* line 113, ../../scss/modules/_frontpage.scss */
+/* line 112, ../../scss/modules/_frontpage.scss */
 
 #news-items li:nth-child(n+2) { /* Put a top border on every LI except the first */
 	border-top: 1px solid #680000;
 }
 
-/* line 117, ../../scss/modules/_frontpage.scss */
+/* line 116, ../../scss/modules/_frontpage.scss */
 
 #news-items li time {
 	font-size: .8em;
