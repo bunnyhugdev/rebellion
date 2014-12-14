@@ -118,6 +118,8 @@ new image size.
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
   register_widget( 'Post_Category_Widget' );
+  register_widget( 'Post_With_Excerpt_Widget' );
+  register_widget( 'Social_Links_Widget' );
 	register_sidebar(array(
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'rebelliontheme' ),
@@ -138,6 +140,15 @@ function bones_register_sidebars() {
     'after_title' => '</h3>',
   ));
 
+  register_sidebar(array(
+    'id' => 'sidebar-midline',
+    'name' => __( 'Sidebar Midline', 'rebelliontheme' ),
+    'description' => __( 'The middle content on the frontpage.', 'rebelliontheme' ),
+    'before_widget' => '<div id="%1$s" class="t-1of3 d-1of3 m-all %2$s"><div class="midline-box">',
+    'after_widget' => '</div></div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  ));
 
 	/*
 	to add more sidebars or widgetized areas, just copy
