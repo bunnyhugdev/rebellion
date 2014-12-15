@@ -57,6 +57,7 @@
 					function finishInitMap(center) {
 						var locations = [], infoContents = {}, tmpPos, tmpDist, tmpMarker,
 								infoWindow = new google.maps.InfoWindow(),
+								icon = '<?php echo get_template_directory_uri(); ?>/favicon-32x32.png',
 								stripSpaceRegex = /\+/g;
 						<?php $args = array( 'post_type' => 'location_type', 'nopaging' => true );
 						$loop = new WP_Query( $args );
@@ -70,6 +71,7 @@
 								position: tmpPos,
 								map: map,
 								animation: google.maps.Animation.DROP,
+								icon: icon,
 								title: '<?php echo get_the_title(); ?>'
 							});
 							infoContents[tmpPos] = {

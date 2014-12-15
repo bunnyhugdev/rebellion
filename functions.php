@@ -234,7 +234,24 @@ add_action('wp_print_styles', 'bones_fonts');
 Add some customizable properties to our theme
 */
 function rebelliontheme_customize( $wp_customize ) {
-  //$wp_customize->add_setting();
+  $wp_customize->add_setting( 'physical_address' , array(
+    'default' => '',
+    'transport' => 'refresh'
+  ));
+
+  $wp_customize->add_section( 'brewery_props', array(
+    'title' => __( 'Brewery Properties', 'rebelliontheme' ),
+    'priority' => 60
+  ));
+
+  $wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize, 'physical_address_control', array(
+      'label' => __( 'Physical Address', 'rebelliontheme' ),
+      'section' => 'brewery_props',
+      'settings' => 'physical_address',
+      'type' => 'text'
+    )
+  ));
 }
 add_action( 'customize_register', 'rebelliontheme_customize' );
 

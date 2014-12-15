@@ -44,7 +44,7 @@ if (array_key_exists('brewers-image', $flds)) {
 							<i id='scroll-down-arrow' class='fa fa-angle-down'></i>
 						</div>
 					</div>
-					<?php get_sidebar( 'midline' ); ?>					
+					<?php get_sidebar( 'midline' ); ?>
 					<?php get_sidebar( 'bottom' ); ?>
 				</div>
 			</div>
