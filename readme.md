@@ -6,6 +6,3 @@ This theme is being designed and built for the Rebellion Brewing Company of Regi
 ## TODO
 ### Frontpage
 - add featured event content
-
-### Bios / About
-- Create a page that lists all the bios for staff
