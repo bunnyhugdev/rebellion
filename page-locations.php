@@ -27,7 +27,9 @@
 			<script type='text/javascript'>
 				function defaultGeoLocation() {
 					// LatLng of the brewery
-					return new google.maps.LatLng(50.455029, -104.608130);
+					var lat = <?php echo get_theme_mod( 'lat', 0); ?>,
+							lng = <?php echo get_theme_mod( 'long', 0); ?>;
+					return new google.maps.LatLng(lat, lng);
 				}
 				function initMap() {
 					var qry = <?php echo ($_GET['location']) ? '"' . htmlspecialchars($_GET['location']) . '"' : 'null'; ?>;
@@ -59,6 +61,37 @@
 								infoWindow = new google.maps.InfoWindow(),
 								icon = '<?php echo get_template_directory_uri(); ?>/favicon-32x32.png',
 								stripSpaceRegex = /\+/g;
+						// You are here marker
+						tmpMarker = new google.maps.Marker({
+							position: center,
+							map: map,
+							title: 'Your current location'
+						});
+						// Add the brewery to the map
+						tmpPos = defaultGeoLocation();
+						tmpDist = google.maps.geometry.spherical.computeDistanceBetween(center, tmpPos);
+						locations.push({position: tmpPos, distance: tmpDist});
+						tmpMarker = new google.maps.Marker({
+							position: tmpPos,
+							map: map,
+							animation: google.maps.Animation.DROP,
+							icon: '<?php echo get_template_directory_uri() . "/library/images/big-logo.png"; ?>',
+							title: '<?php echo get_bloginfo( 'name' ); ?>'
+						});
+						infoContents[tmpPos] = {
+							title: '<?php echo urlencode( get_bloginfo( 'name' ) ); ?>',
+							content: '<?php echo urlencode( get_theme_mod( 'physical_address', '' ) ); ?>',
+							marker: tmpMarker
+						};
+						google.maps.event.addListener(tmpMarker, 'click', function(evt) {
+							var pl = infoContents[evt.latLng];
+							infoWindow.setContent('<h4>' +
+							decodeURIComponent(pl.title).replace(stripSpaceRegex, ' ') +
+							'</h4> ' +
+							decodeURIComponent(pl.content).replace(stripSpaceRegex, ' '));
+							infoWindow.setPosition(evt.latLng);
+							infoWindow.open(map, pl.marker);
+						});
 						<?php $args = array( 'post_type' => 'location_type', 'nopaging' => true );
 						$loop = new WP_Query( $args );
 						if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();

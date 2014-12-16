@@ -238,6 +238,14 @@ function rebelliontheme_customize( $wp_customize ) {
     'default' => '',
     'transport' => 'refresh'
   ));
+  $wp_customize->add_setting( 'lat', array(
+    'default' => '',
+    'transport' => 'refresh'
+  ));
+  $wp_customize->add_setting( 'long', array(
+    'default' => '',
+    'transport' => 'refresh'
+  ));
 
   $wp_customize->add_section( 'brewery_props', array(
     'title' => __( 'Brewery Properties', 'rebelliontheme' ),
@@ -250,6 +258,22 @@ function rebelliontheme_customize( $wp_customize ) {
       'section' => 'brewery_props',
       'settings' => 'physical_address',
       'type' => 'text'
+    )
+  ));
+  $wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize, 'lat_control', array(
+      'label' => __( 'Latitude', 'rebelliontheme' ),
+      'section' => 'brewery_props',
+      'settings' => 'lat',
+      'type' => 'number'
+    )
+  ));
+  $wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize, 'long_control', array(
+      'label' => __( 'Longitude', 'rebelliontheme' ),
+      'section' => 'brewery_props',
+      'settings' => 'long',
+      'type' => 'number'
     )
   ));
 }
