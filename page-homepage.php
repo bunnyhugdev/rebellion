@@ -10,10 +10,17 @@
 <?php
 $flds = get_post_custom();
 $topImgUrl = NULL;
+$bottomImgUrl = NULL;
 if (array_key_exists('top-image', $flds)) {
 	$topImage = $flds['top-image'];
 	if (count($topImage) >= 1) {
 		$topImgUrl = get_site_url() . $topImage[0];
+	}
+}
+if (array_key_exists('bottom-sidebar-image', $flds)) {
+	$bottomImage = $flds['bottom-sidebar-image'];
+	if (count($bottomImage) >= 1) {
+		$bottomImgUrl = get_site_url() . $bottomImage[0];
 	}
 }
 ?>
@@ -39,7 +46,36 @@ if (array_key_exists('top-image', $flds)) {
 						</div>
 					</div>
 					<?php get_sidebar( 'midline' ); ?>
-					<?php get_sidebar( 'bottom' ); ?>
+					<?php
+					$qry = new WP_Query( array(
+						'posts_per_page' => 1,
+						'post_type' => 'post',
+						'category_name' => 'feature_event'
+					) );
+					if ( $qry->have_posts() ): while ( $qry->have_posts() ): $qry->the_post(); ?>
+					<div class="m-all cf featured-event">
+						<header class="article-header">
+
+							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+
+						</header>
+						<section class="entry-content cf" itemprop="articleBody">
+							<?php
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'full' );
+							}
+							?>
+							<?php the_excerpt(); ?>
+						</section>
+					</div>
+					<?php endwhile; endif; ?>
+					<?php if ( is_active_sidebar( 'sidebar-bottom' ) ) : ?>
+					<div class='beer-culture' <?php if (!is_null($bottomImgUrl)) echo 'style="background-image: url(' . $bottomImgUrl . ');"'; ?>>
+						<h1>We Support Local Brewers</h1>
+						<?php dynamic_sidebar( 'sidebar-bottom' ); ?>
+						<div class="cf"></div>
+					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 			<script type='text/javascript'>

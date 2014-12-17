@@ -7,23 +7,28 @@
 					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-							<?php
-								/*
-								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-								 *
-								 * So this function will bring in the needed template file depending on what the post
-								 * format is. The different post formats are located in the post-formats folder.
-								 *
-								 *
-								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
-								 * A SPECIFIC POST FORMAT.
-								 *
-								 * If you want to remove post formats, just delete the post-formats folder and
-								 * replace the function below with the contents of the "format.php" file.
-								*/
-								get_template_part( 'post-formats/format', get_post_format() );
-							?>
+								<header class="article-header">
+
+									<h2 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h2>
+
+									<p class="byline vcard">
+										<?php printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'rebelliontheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')) ); ?>
+									</p>
+
+								</header>
+
+								<section class="entry-content cf" itemprop="articleBody">
+									<?php
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail( 'large' );
+									}
+									?>
+									<?php the_content(); ?>
+								</section>
+
+							</article>
 
 						<?php endwhile; ?>
 

@@ -1267,7 +1267,7 @@ POSTS & CONTENT STYLES
 /* line 314, ../../scss/breakpoints/_base.scss */
 
 .entry-content {
-	padding: 1.5em 1.5em 0; /*
+	padding: 0 1.5em; /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
   and floating images at the next breakpoint,
@@ -2501,6 +2501,30 @@ h3 {
 	position: relative;
 	font-style: italic;
 	color: #680000;
+}
+
+/* line 102, ../../scss/modules/_frontpage.scss */
+
+.beer-culture {
+	background-attachment: fixed;
+	background-size: cover;
+	padding-top: 1em;
+}
+
+/* line 106, ../../scss/modules/_frontpage.scss */
+
+.beer-culture h1 {
+	margin-top: 0;
+}
+
+/* line 109, ../../scss/modules/_frontpage.scss */
+
+.beer-culture .content-box {
+	background-color: rgba(255, 255, 255, 0.7);
+	color: #333333;
+	border-radius: 4px;
+	padding: .5em;
+	margin-bottom: .5em;
 }
 
 /* line 1, ../../scss/modules/_locator.scss */
