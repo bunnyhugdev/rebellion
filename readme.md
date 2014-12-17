@@ -6,8 +6,6 @@ This theme is being designed and built for the Rebellion Brewing Company of Regi
 ## TODO
 ### Frontpage
 - add featured event content
-- add label to beer finder
 
 ## Misc
 - add Google Analytics
-

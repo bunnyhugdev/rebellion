@@ -2449,72 +2449,38 @@ h3 {
 	margin: 0 2em;
 }
 
-/* line 65, ../../scss/modules/_frontpage.scss */
-
-.content-box .bio-pic {
-	text-align: center;
-}
-
-/* line 70, ../../scss/modules/_frontpage.scss */
-
-#brewers-section {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-/* line 74, ../../scss/modules/_frontpage.scss */
-
-#brewers-section .content-box {
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 8px;
-	padding: 1em;
-	margin-bottom: 1em;
-}
-
-/* line 79, ../../scss/modules/_frontpage.scss */
-
-#brewers-section .content-box h3 {
-	background-repeat: no-repeat;
-	background-size: contain;
-	min-height: 10em;
-	background-position: center;
-	font-size: 2em;
-	color: #9b0000;
-}
-
-/* line 90, ../../scss/modules/_frontpage.scss */
+/* line 67, ../../scss/modules/_frontpage.scss */
 
 .community-tap,
 .community-tap h3 {
 	text-align: right;
 }
 
-/* line 96, ../../scss/modules/_frontpage.scss */
+/* line 73, ../../scss/modules/_frontpage.scss */
 
 #news-items li {
 	margin: .5em 0;
 }
 
-/* line 98, ../../scss/modules/_frontpage.scss */
+/* line 75, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 {
 	margin-bottom: .1em;
 }
 
-/* line 100, ../../scss/modules/_frontpage.scss */
+/* line 77, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a {
 	color: #fff;
 }
 
-/* line 102, ../../scss/modules/_frontpage.scss */
+/* line 79, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a:hover {
 	color: #e8e8e8;
 }
 
-/* line 107, ../../scss/modules/_frontpage.scss */
+/* line 84, ../../scss/modules/_frontpage.scss */
 
 #news-items li p {
 	margin-top: 0.2em;
@@ -2522,13 +2488,13 @@ h3 {
 	font-size: 0.9em;
 }
 
-/* line 112, ../../scss/modules/_frontpage.scss */
+/* line 89, ../../scss/modules/_frontpage.scss */
 
 #news-items li:nth-child(n+2) { /* Put a top border on every LI except the first */
 	border-top: 1px solid #680000;
 }
 
-/* line 116, ../../scss/modules/_frontpage.scss */
+/* line 93, ../../scss/modules/_frontpage.scss */
 
 #news-items li time {
 	font-size: .8em;
@@ -2551,50 +2517,33 @@ h3 {
 	padding: .5em;
 }
 
-/* line 9, ../../scss/modules/_locator.scss */
+/* line 8, ../../scss/modules/_locator.scss */
+
+.locator .address-search {
+	color: #333333;
+}
+
+/* line 10, ../../scss/modules/_locator.scss */
 
 .locator .address-search input {
 	display: inline-block;
 	width: 75%;
-	opacity: 0.6;
 }
 
-/* line 13, ../../scss/modules/_locator.scss */
-
-.locator .address-search input:focus {
-	opacity: 1;
-	-webkit-transition: background-color 0.4s ease-in-out;
-	-moz-transition: background-color 0.4s ease-in-out;
-	-ms-transition: background-color 0.4s ease-in-out;
-	-o-transition: background-color 0.4s ease-in-out;
-}
-
-/* line 18, ../../scss/modules/_locator.scss */
+/* line 14, ../../scss/modules/_locator.scss */
 
 .locator .address-search button {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	margin-bottom: 14px;
 	width: 25%;
-	opacity: 0.6;
 }
 
-/* line 27, ../../scss/modules/_locator.scss */
+/* line 22, ../../scss/modules/_locator.scss */
 
 .locator .current-location button {
 	max-width: 430px;
 	width: 100%;
-	opacity: 0.6;
-}
-
-/* line 34, ../../scss/modules/_locator.scss */
-
-.locator .primary-btn:hover {
-	opacity: 1;
-	-webkit-transition: background-color 0.4s ease-in-out;
-	-moz-transition: background-color 0.4s ease-in-out;
-	-ms-transition: background-color 0.4s ease-in-out;
-	-o-transition: background-color 0.4s ease-in-out;
 }
 
 /* line 1, ../../scss/modules/_posts.scss */

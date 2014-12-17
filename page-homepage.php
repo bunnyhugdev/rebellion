@@ -10,20 +10,12 @@
 <?php
 $flds = get_post_custom();
 $topImgUrl = NULL;
-$brewersImgUrl = NULL;
 if (array_key_exists('top-image', $flds)) {
 	$topImage = $flds['top-image'];
 	if (count($topImage) >= 1) {
 		$topImgUrl = get_site_url() . $topImage[0];
 	}
 }
-if (array_key_exists('brewers-image', $flds)) {
-	$brewersImage = $flds['brewers-image'];
-	if (count($brewersImage) >= 1) {
-		$brewersImgUrl = get_site_url() . $brewersImage[0];
-	}
-}
-
 ?>
 			<div id="front-content">
 				<div id="inner-content" class="cf">
@@ -33,11 +25,13 @@ if (array_key_exists('brewers-image', $flds)) {
 							<h1><?php bloginfo( 'description' ); ?></h1>
 							<div class="locator">
 								<form method="GET" action="<?php echo get_site_url() . '/locations/';?>">
-									<div class="address-search">
-										<input name="location" placeholder="Enter an address" type='text'><button class='primary-btn'>Find</button>
-									</div>
 									<div class="current-location">
-										<button type="button" class='primary-btn'>Use my current location</button>
+										<button type="button" class='primary-btn'>Find a Rebellion Near Me</button>
+									</div>
+									<div class="address-search">
+										<p>&mdash; OR &mdash;<br>
+										Enter an address to find the nearest Rebellion.</p>
+										<input name="location" placeholder="Enter an address" type='text'><button class='primary-btn'>Search</button>
 									</div>
 								</form>
 							</div>
