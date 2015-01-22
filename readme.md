@@ -6,6 +6,11 @@ This theme is being designed and built for the Rebellion Brewing Company of Regi
 ## TODO
 ### Frontpage
 - add featured event content
+- Rejig midline boxes to 2 columns with social and contact stacked
 
-## Misc
+### Misc
 - add Google Analytics
+- performance tuning
+
+### Locations
+- Prevent locations entered without an address from crashing map
