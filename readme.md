@@ -9,7 +9,6 @@ This theme is being designed and built for the Rebellion Brewing Company of Regi
 - Rejig midline boxes to 2 columns with social and contact stacked
 
 ### Misc
-- add Google Analytics
 - performance tuning
 
 ### Locations

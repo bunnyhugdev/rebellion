@@ -246,10 +246,18 @@ function rebelliontheme_customize( $wp_customize ) {
     'default' => '',
     'transport' => 'refresh'
   ));
+  $wp_customize->add_setting( 'ga-id', array(
+    'default' => '',
+    'transport' => 'refresh'
+  ));
 
   $wp_customize->add_section( 'brewery_props', array(
     'title' => __( 'Brewery Properties', 'rebelliontheme' ),
     'priority' => 60
+  ));
+  $wp_customize->add_section( 'analytics', array(
+    'title' => __( 'Analytics', 'rebelliontheme' ),
+    'priority' => 70
   ));
 
   $wp_customize->add_control( new WP_Customize_Control(
@@ -274,6 +282,14 @@ function rebelliontheme_customize( $wp_customize ) {
       'section' => 'brewery_props',
       'settings' => 'long',
       'type' => 'number'
+    )
+  ));
+  $wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize, 'ga-id_control', array(
+      'label' => __( 'Google Analytics ID', 'rebelliontheme' ),
+      'section' => 'analytics',
+      'settings' => 'ga-id',
+      'type' => 'text'
     )
   ));
 }
