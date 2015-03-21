@@ -133,6 +133,11 @@ class Social_Links_Widget extends WP_Widget {
     if ( ! empty( $instance['instagram'] ) ) {
       echo '<li><a href="' . $instance['instagram'] . '"><i class="fa fa-instagram fa-2x"></i></a></li>';
     }
+    if ( ! empty( $instance['untappd'] ) ) {
+      echo '<li><a href="' . $instance['untappd'] . '"><img src="' .
+        get_template_directory_uri() . '/library/images/untappd.png" class="social-untappd" ' .
+        'alt="Rebellion Untappd"></a></li>';
+    }
     echo '</ul>';
     echo $args['after_widget'];
   }
@@ -144,6 +149,7 @@ class Social_Links_Widget extends WP_Widget {
     $youtube = ! empty( $instance['youtube'] ) ? $instance['youtube'] : '';
     $instagram = ! empty( $instance['instagram'] ) ? $instance['instagram'] : '';
     $tagline = ! empty( $instance['tagline'] ) ? $instance['tagline'] : __( 'Like. Follow. Share.', 'rebelliontheme' );
+    $untappd = ! empty( $instance['untappd'] ) ? $instance['untappd'] : '';
     ?>
     <p>
       <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -168,6 +174,10 @@ class Social_Links_Widget extends WP_Widget {
       <label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram:' ); ?></label>
       <input class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>">
     </p>
+    <p>
+      <label for="<?php echo $this->get_field_id( 'untappd' ); ?>"><?php _e( 'Untappd:' ); ?></label>
+      <input class="widefat" id="<?php echo $this->get_field_id( 'untappd' ); ?>" name="<?php echo $this->get_field_name( 'untappd' ); ?>" type="text" value="<?php echo esc_attr( $untappd ); ?>">
+    </p>
     <?php
   }
 
@@ -179,6 +189,7 @@ class Social_Links_Widget extends WP_Widget {
     $instance['youtube'] = ( ! empty( $new_instance['youtube'] ) ) ? strip_tags( $new_instance['youtube'] ) : '';
     $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
     $instance['tagline'] = ( ! empty( $new_instance['tagline'] ) ) ? strip_tags( $new_instance['tagline'] ) : '';
+    $instance['untappd'] = ( ! empty( $new_instance['untappd'] ) ) ? strip_tags( $new_instance['untappd'] ) : '';
     return $instance;
   }
 }
