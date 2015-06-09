@@ -120,7 +120,7 @@ function bones_register_sidebars() {
   register_widget( 'Post_Category_Widget' );
   register_widget( 'Post_With_Excerpt_Widget' );
   register_widget( 'Social_Links_Widget' );
-	register_sidebar(array(
+  register_sidebar(array(
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'rebelliontheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'rebelliontheme' ),
@@ -128,7 +128,7 @@ function bones_register_sidebars() {
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
-	));
+  ));
 
   register_sidebar(array(
     'id' => 'sidebar-bottom',
@@ -148,6 +148,16 @@ function bones_register_sidebars() {
     'after_widget' => '</div></div>',
     'before_title' => '<h3>',
     'after_title' => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'id' => 'sidebar-social',
+    'name' => __( 'Social Sidebar', 'rebelliontheme' ),
+    'description' => __( 'A widget to hold all of your social icons', 'rebelliontheme' ),
+    'before_widget' => '<span id="%1$s" class="social-icons">',
+    'after_widget' => '</span>',
+    'before_title' => '',
+    'after_title' => ''
   ));
 
 	/*

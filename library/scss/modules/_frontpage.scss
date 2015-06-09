@@ -50,10 +50,13 @@ h1, h2, h3 {
 }
 
 #social-links {
-	text-align: center;
+	text-align: right;
+	display: inline-block;
+	margin: 0 3em 0 0;
+	font-size: .75em;
 	li {
 		display: inline;
-		margin: 10px 20px;
+		margin: 0 20px;
 		vertical-align: top;
 		a {
 			color: $white;

@@ -119,19 +119,18 @@ class Social_Links_Widget extends WP_Widget {
       apply_filters( 'widget_title' , $instance['title'] ) .
       $args['after_title'];
     }
-    echo '<p>' . $instance['tagline'] . '</p>';
     echo '<ul id="social-links">';
     if ( ! empty( $instance['facebook'] ) ) {
-      echo '<li><a href="' . $instance['facebook'] . '"><i class="fa fa-facebook fa-2x"></i></a></li>';
+      echo '<li><a href="' . $instance['facebook'] . '"><i class="fa fa-facebook"></i></a></li>';
     }
     if ( ! empty( $instance['twitter'] ) ) {
-      echo '<li><a href="' . $instance['twitter'] . '"><i class="fa fa-twitter fa-2x"></i></a></li>';
+      echo '<li><a href="' . $instance['twitter'] . '"><i class="fa fa-twitter"></i></a></li>';
     }
     if ( ! empty( $instance['youtube'] ) ) {
-      echo '<li><a href="' . $instance['youtube'] . '"><i class="fa fa-youtube fa-2x"></i></a></li>';
+      echo '<li><a href="' . $instance['youtube'] . '"><i class="fa fa-youtube"></i></a></li>';
     }
     if ( ! empty( $instance['instagram'] ) ) {
-      echo '<li><a href="' . $instance['instagram'] . '"><i class="fa fa-instagram fa-2x"></i></a></li>';
+      echo '<li><a href="' . $instance['instagram'] . '"><i class="fa fa-instagram"></i></a></li>';
     }
     if ( ! empty( $instance['untappd'] ) ) {
       echo '<li><a href="' . $instance['untappd'] . '"><img src="' .

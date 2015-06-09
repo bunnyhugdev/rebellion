@@ -2346,12 +2346,38 @@ select {
 
 /* line 5, ../../scss/modules/_header.scss */
 
+#logo img {
+	padding-top: 10px;
+	height: 32px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+/* line 10, ../../scss/modules/_header.scss */
+
 #logo.minimized {
 	margin: 0.25em 0;
 	font-size: 1.5em;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 
-/* line 9, ../../scss/modules/_header.scss */
+/* line 14, ../../scss/modules/_header.scss */
+
+#logo.minimized img {
+	padding-top: 7px;
+	height: 24px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+/* line 20, ../../scss/modules/_header.scss */
 
 #logo #brand {
 	margin-left: 1em;
@@ -2361,7 +2387,7 @@ select {
 	background-size: contain;
 }
 
-/* line 21, ../../scss/modules/_header.scss */
+/* line 32, ../../scss/modules/_header.scss */
 
 .header {
 	position: fixed;
@@ -2369,7 +2395,7 @@ select {
 	z-index: 1;
 }
 
-/* line 27, ../../scss/modules/_header.scss */
+/* line 38, ../../scss/modules/_header.scss */
 
 #nav-container {
 	text-align: right;
@@ -2422,61 +2448,64 @@ h3 {
 /* line 52, ../../scss/modules/_frontpage.scss */
 
 #social-links {
-	text-align: center;
+	text-align: right;
+	display: inline-block;
+	margin: 0 3em 0 0;
+	font-size: .75em;
 }
 
-/* line 54, ../../scss/modules/_frontpage.scss */
+/* line 57, ../../scss/modules/_frontpage.scss */
 
 #social-links li {
 	display: inline;
-	margin: 10px 20px;
+	margin: 0 20px;
 	vertical-align: top;
 }
 
-/* line 58, ../../scss/modules/_frontpage.scss */
+/* line 61, ../../scss/modules/_frontpage.scss */
 
 #social-links li a {
 	color: #fff;
 }
 
-/* line 64, ../../scss/modules/_frontpage.scss */
+/* line 67, ../../scss/modules/_frontpage.scss */
 
 .content-box {
 	margin: 0 2em;
 }
 
-/* line 68, ../../scss/modules/_frontpage.scss */
+/* line 71, ../../scss/modules/_frontpage.scss */
 
 .community-tap,
 .community-tap h3 {
 	text-align: right;
 }
 
-/* line 74, ../../scss/modules/_frontpage.scss */
+/* line 77, ../../scss/modules/_frontpage.scss */
 
 #news-items li {
 	margin: .5em 0;
 }
 
-/* line 76, ../../scss/modules/_frontpage.scss */
+/* line 79, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 {
 	margin-bottom: .1em;
 }
 
-/* line 78, ../../scss/modules/_frontpage.scss */
+/* line 81, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a {
 	color: #fff;
 }
 
-/* line 80, ../../scss/modules/_frontpage.scss */
+/* line 83, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a:hover {
 	color: #e8e8e8;
 }
 
-/* line 85, ../../scss/modules/_frontpage.scss */
+/* line 88, ../../scss/modules/_frontpage.scss */
 
 #news-items li p {
 	margin-top: 0.2em;
@@ -2484,13 +2513,13 @@ h3 {
 	font-size: 0.9em;
 }
 
-/* line 90, ../../scss/modules/_frontpage.scss */
+/* line 93, ../../scss/modules/_frontpage.scss */
 
 #news-items li:nth-child(n+2) { /* Put a top border on every LI except the first */
 	border-top: 1px solid #680000;
 }
 
-/* line 94, ../../scss/modules/_frontpage.scss */
+/* line 97, ../../scss/modules/_frontpage.scss */
 
 #news-items li time {
 	font-size: .8em;
@@ -2499,7 +2528,7 @@ h3 {
 	color: #680000;
 }
 
-/* line 103, ../../scss/modules/_frontpage.scss */
+/* line 106, ../../scss/modules/_frontpage.scss */
 
 .beer-culture {
 	background-attachment: fixed;
@@ -2507,13 +2536,13 @@ h3 {
 	padding-top: 1em;
 }
 
-/* line 107, ../../scss/modules/_frontpage.scss */
+/* line 110, ../../scss/modules/_frontpage.scss */
 
 .beer-culture h1 {
 	margin-top: 0;
 }
 
-/* line 110, ../../scss/modules/_frontpage.scss */
+/* line 113, ../../scss/modules/_frontpage.scss */
 
 .beer-culture .content-box {
 	background-color: rgba(255, 255, 255, 0.7);
