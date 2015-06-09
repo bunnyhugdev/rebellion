@@ -103,6 +103,20 @@ h1, h2, h3 {
 	}
 }
 
+div.event-list .start-date,
+div.event-list .end-date {
+	background-color: inherit;
+}
+div.event-list .event-title h3 {
+	font-family: $montserrat;
+}
+.event-title a {
+	color: $white;
+	&:hover {
+		color: darken($white, 9%);
+	}
+}
+
 .beer-culture {
 	background-attachment: fixed;
 	background-size: cover;

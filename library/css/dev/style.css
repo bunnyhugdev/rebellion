@@ -2811,16 +2811,36 @@ h1, h2, h3 {
 }
 
 /* line 106, ../../scss/modules/_frontpage.scss */
+div.event-list .start-date,
+div.event-list .end-date {
+  background-color: inherit;
+}
+
+/* line 110, ../../scss/modules/_frontpage.scss */
+div.event-list .event-title h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 113, ../../scss/modules/_frontpage.scss */
+.event-title a {
+  color: #fff;
+}
+/* line 115, ../../scss/modules/_frontpage.scss */
+.event-title a:hover {
+  color: #e8e8e8;
+}
+
+/* line 120, ../../scss/modules/_frontpage.scss */
 .beer-culture {
   background-attachment: fixed;
   background-size: cover;
   padding-top: 1em;
 }
-/* line 110, ../../scss/modules/_frontpage.scss */
+/* line 124, ../../scss/modules/_frontpage.scss */
 .beer-culture h1 {
   margin-top: 0;
 }
-/* line 113, ../../scss/modules/_frontpage.scss */
+/* line 127, ../../scss/modules/_frontpage.scss */
 .beer-culture .content-box {
   background-color: rgba(255, 255, 255, 0.7);
   color: #333333;
