@@ -2279,7 +2279,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   line-height: 40px;
   height: 40px;
   font-weight: normal;
-  padding: 0 24px;
+  padding: 0 .5em;
   border-radius: 4px;
   border: 0;
   vertical-align: middle;
@@ -2756,7 +2756,7 @@ h1, h2, h3 {
 /* line 57, ../../scss/modules/_frontpage.scss */
 #social-links li {
   display: inline;
-  margin: 0 20px;
+  margin: 0 .4em;
   vertical-align: top;
 }
 /* line 61, ../../scss/modules/_frontpage.scss */
@@ -2764,45 +2764,56 @@ h1, h2, h3 {
   color: #fff;
 }
 
-/* line 67, ../../scss/modules/_frontpage.scss */
+@media (max-width: 768px) {
+  /* line 68, ../../scss/modules/_frontpage.scss */
+  #logo #brand {
+    margin-left: 0;
+  }
+
+  /* line 71, ../../scss/modules/_frontpage.scss */
+  #social-links {
+    float: left;
+  }
+}
+/* line 76, ../../scss/modules/_frontpage.scss */
 .content-box {
   margin: 0 2em;
 }
 
-/* line 71, ../../scss/modules/_frontpage.scss */
+/* line 80, ../../scss/modules/_frontpage.scss */
 .community-tap,
 .community-tap h3 {
   text-align: right;
 }
 
-/* line 77, ../../scss/modules/_frontpage.scss */
+/* line 86, ../../scss/modules/_frontpage.scss */
 #news-items li {
   margin: .5em 0;
 }
-/* line 79, ../../scss/modules/_frontpage.scss */
+/* line 88, ../../scss/modules/_frontpage.scss */
 #news-items li h4 {
   margin-bottom: .1em;
 }
-/* line 81, ../../scss/modules/_frontpage.scss */
+/* line 90, ../../scss/modules/_frontpage.scss */
 #news-items li h4 a {
   color: #fff;
 }
-/* line 83, ../../scss/modules/_frontpage.scss */
+/* line 92, ../../scss/modules/_frontpage.scss */
 #news-items li h4 a:hover {
   color: #e8e8e8;
 }
-/* line 88, ../../scss/modules/_frontpage.scss */
+/* line 97, ../../scss/modules/_frontpage.scss */
 #news-items li p {
   margin-top: 0.2em;
   font-style: italic;
   font-size: 0.9em;
 }
-/* line 93, ../../scss/modules/_frontpage.scss */
+/* line 102, ../../scss/modules/_frontpage.scss */
 #news-items li:nth-child(n+2) {
   /* Put a top border on every LI except the first */
   border-top: 1px solid #680000;
 }
-/* line 97, ../../scss/modules/_frontpage.scss */
+/* line 106, ../../scss/modules/_frontpage.scss */
 #news-items li time {
   font-size: .8em;
   position: relative;
@@ -2810,37 +2821,37 @@ h1, h2, h3 {
   color: #680000;
 }
 
-/* line 106, ../../scss/modules/_frontpage.scss */
+/* line 115, ../../scss/modules/_frontpage.scss */
 div.event-list .start-date,
 div.event-list .end-date {
   background-color: inherit;
 }
 
-/* line 110, ../../scss/modules/_frontpage.scss */
+/* line 119, ../../scss/modules/_frontpage.scss */
 div.event-list .event-title h3 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 113, ../../scss/modules/_frontpage.scss */
+/* line 123, ../../scss/modules/_frontpage.scss */
 .event-title a {
   color: #fff;
 }
-/* line 115, ../../scss/modules/_frontpage.scss */
+/* line 125, ../../scss/modules/_frontpage.scss */
 .event-title a:hover {
   color: #e8e8e8;
 }
 
-/* line 120, ../../scss/modules/_frontpage.scss */
+/* line 130, ../../scss/modules/_frontpage.scss */
 .beer-culture {
   background-attachment: fixed;
   background-size: cover;
   padding-top: 1em;
 }
-/* line 124, ../../scss/modules/_frontpage.scss */
+/* line 134, ../../scss/modules/_frontpage.scss */
 .beer-culture h1 {
   margin-top: 0;
 }
-/* line 127, ../../scss/modules/_frontpage.scss */
+/* line 137, ../../scss/modules/_frontpage.scss */
 .beer-culture .content-box {
   background-color: rgba(255, 255, 255, 0.7);
   color: #333333;

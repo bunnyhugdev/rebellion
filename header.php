@@ -74,10 +74,10 @@
 				<div id="inner-header" class="cf">
 
 					<h1 id="logo" class="h1">
-						<div class="m-1of2 t-1of2 d-1of2">
+						<div class="m-all t-1of2 d-1of2">
 							<a id="brand" href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
 						</div>
-						<div class="m-1of2 t-1of2 d-1of2" id="nav-container">
+						<div class="m-all t-1of2 d-1of2" id="nav-container">
 							<?php get_sidebar('social'); ?>
 							<a href="#menu-mainnav" id="toggle-nav"><i class="fa fa-bars"></i></a>
 						</div>

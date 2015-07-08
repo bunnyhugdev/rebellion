@@ -56,11 +56,20 @@ h1, h2, h3 {
 	font-size: .75em;
 	li {
 		display: inline;
-		margin: 0 20px;
+		margin: 0 .4em;
 		vertical-align: top;
 		a {
 			color: $white;
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	#logo #brand {
+		margin-left: 0;
+	}
+	#social-links {
+		float: left;
 	}
 }
 
@@ -110,6 +119,7 @@ div.event-list .end-date {
 div.event-list .event-title h3 {
 	font-family: $montserrat;
 }
+
 .event-title a {
 	color: $white;
 	&:hover {
