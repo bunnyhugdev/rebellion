@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<script type="text/javascript"
-      	src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyDMLZOSsRy4Or2dxcz1Mco-FMCSkap2BHI">
+      			src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyDMLZOSsRy4Or2dxcz1Mco-FMCSkap2BHI">
 			</script>
 			<script type='text/javascript'>
 				function defaultGeoLocation() {
@@ -42,8 +42,9 @@
 					if (qry == null) {
 						if (navigator.geolocation) {
 							navigator.geolocation.getCurrentPosition(function(position) {
-								loc = new google.maps.LatLng(position.coords.latitude,
-																						 position.coords.longitude);
+								loc = new google.maps.LatLng(
+										position.coords.latitude,
+										position.coords.longitude);
 								finishInitMap(loc);
 							});
 						}
@@ -59,7 +60,9 @@
 					function finishInitMap(center) {
 						var locations = [], infoContents = {}, tmpPos, tmpDist, tmpMarker,
 								infoWindow = new google.maps.InfoWindow(),
-								icon = '<?php echo get_template_directory_uri(); ?>/favicon-32x32.png',
+								growlerIcon = '<?php echo get_template_directory_uri(); ?>/library/images/growler-icon.png',
+								draftIcon = '<?php echo get_template_directory_uri(); ?>/library/images/draft-icon.png',
+								growlerDraftIcon = '<?php echo get_template_directory_uri(); ?>/library/images/growler-draft-icon.png',
 								stripSpaceRegex = /\+/g;
 						// You are here marker
 						tmpMarker = new google.maps.Marker({
@@ -96,6 +99,10 @@
 						$loop = new WP_Query( $args );
 						if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
 							$loc = get_field( 'location' );
+							$offering = get_field( 'offerings' );
+							if ( strlen( $offering) == 0 ) {
+								$offering = 'draft';
+							}
 							?>
 							tmpPos = new google.maps.LatLng(<?php echo $loc['lat'] . ', '. $loc['lng']; ?>);
 							tmpDist = google.maps.geometry.spherical.computeDistanceBetween(center, tmpPos);
@@ -104,7 +111,7 @@
 								position: tmpPos,
 								map: map,
 								animation: google.maps.Animation.DROP,
-								icon: icon,
+								icon: '<?php echo get_template_directory_uri(); ?>/library/images/<?php echo $offering; ?>-icon.png',
 								title: '<?php echo get_the_title(); ?>'
 							});
 							infoContents[tmpPos] = {
