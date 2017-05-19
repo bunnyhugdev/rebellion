@@ -244,7 +244,13 @@ and more scalable.
 
 	}  /* end current highlighters */
 
-} /* end .nav */
+}
+#toggle-nav {
+    font-size: .5em;
+    border: 1px solid white;
+    padding: .2em .5em;
+}
+/* end .nav */
 
 
 /*********************

@@ -24,6 +24,7 @@ if (array_key_exists('bottom-sidebar-image', $flds)) {
 	}
 }
 ?>
+
 			<div id="front-content">
 				<div id="inner-content" class="cf">
 					<div id="main" class="m-all cf frontpage"
@@ -33,7 +34,7 @@ if (array_key_exists('bottom-sidebar-image', $flds)) {
 							<div class="locator">
 								<form method="GET" action="<?php echo get_site_url() . '/locations/';?>">
 									<div class="current-location">
-										<button type="button" class='primary-btn'>Find a Rebellion Near Me</button>
+										<button type="button" class='primary-btn'>Find Rebellion Beer Near Me</button>
 									</div>
 									<div class="address-search">
 										<p>&mdash; OR &mdash;<br>

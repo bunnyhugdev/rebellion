@@ -74,12 +74,12 @@
 				<div id="inner-header" class="cf">
 
 					<h1 id="logo" class="h1">
-						<div class="m-3of4 t-3of4 d-3of4">
-							<a id="brand" class="hide-tiny" href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
-							<a id="brand" class="show-tiny" href="<?php echo home_url(); ?>" rel="nofollow">Rebellion</a>
+						<div class="m-all t-1of2 d-1of2">
+							<a id="brand" href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
 						</div>
-						<div class="m-1of4 t-1of4 d-1of4" id="nav-container">
-							<a href="#menu-mainnav" id="toggle-nav"><i class="fa fa-bars"></i></a>
+						<div class="m-all t-1of2 d-1of2" id="nav-container">
+							<?php get_sidebar('social'); ?>
+							<a href="#menu-mainnav" id="toggle-nav">MENU</a>
 						</div>
 						<div class="cf"></div>
 					</h1>

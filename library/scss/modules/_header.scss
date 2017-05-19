@@ -2,9 +2,20 @@
 	text-align: left;
 	font-family: $outage;
 	@include transition(.5s);
+	img {
+		padding-top: 10px;
+		height: 32px;
+		@include transition(.5s);
+	}
 	&.minimized {
 		margin: 0.25em 0;
 		font-size: 1.5em;
+		@include transition(.5s);
+		img {
+			padding-top: 7px;
+			height: 24px;
+			@include transition(.5s);
+		}
 	}
 	#brand {
 		margin-left: 1em;
@@ -16,7 +27,7 @@
 	@media (max-width: 1029px) {
 		font-size: 2.0em;
 	}
-} 
+}
 
 .header {
 	position: fixed;
