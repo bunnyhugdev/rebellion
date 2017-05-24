@@ -24,11 +24,19 @@ if (array_key_exists('bottom-sidebar-image', $flds)) {
 	}
 }
 ?>
-
+			<!--
+			<?php
+				echo get_theme_mod('background_image', '') . ' / ';
+				echo get_theme_mod('background_size', '') . ' / ';
+				echo get_theme_mod('background_position_x', '') . ' / ';
+				echo get_theme_mod('background_position_y', '') . ' / ';
+				echo get_theme_mod('background_attachment', '') . ' / ';
+			?>
+			-->
 			<div id="front-content">
 				<div id="inner-content" class="cf">
-					<div id="main" class="m-all cf frontpage"
-							role="main" <?php if (!is_null($topImgUrl)) echo 'style="background-image: url(' . $topImgUrl . ');"'; ?>>
+					<div id="main" class=" cf frontpage"
+							role="main" <?php if (!is_null($topImgUrl)) echo 'style="background-image: url(' . get_theme_mod('background-image', '') . ');"'; ?>>
 						<div id="top">
 							<h1><?php bloginfo( 'description' ); ?></h1>
 							<div class="locator">

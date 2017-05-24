@@ -1111,7 +1111,7 @@ HEADER STYLES
 /* line 155, ../../scss/breakpoints/_base.scss */
 
 .header {
-	background-color: #333333;
+	background-color: #000;
 }
 
 /* line 159, ../../scss/breakpoints/_base.scss */
@@ -1382,7 +1382,7 @@ POSTS & CONTENT STYLES
 /* line 436, ../../scss/breakpoints/_base.scss */
 
 .entry-content pre {
-	background: #333333;
+	background: #000;
 	color: #f8f9fa;
 	font-size: 0.9em;
 	padding: 1.5em;
@@ -2416,7 +2416,7 @@ h2,
 h3 {
 	text-align: center;
 	font-family: "Outage", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #680000;
+	color: #9b0000;
 }
 
 /* line 16, ../../scss/modules/_frontpage.scss */
@@ -2428,6 +2428,12 @@ h3 {
 
 /* line 20, ../../scss/modules/_frontpage.scss */
 
+#main #top h1 {
+	color: #fff;
+}
+
+/* line 23, ../../scss/modules/_frontpage.scss */
+
 #main #top #scroll-down-arrow {
 	position: absolute;
 	left: 45%;
@@ -2435,25 +2441,25 @@ h3 {
 	width: 10%;
 	text-align: center;
 	font-size: 8em;
-	color: #9b0000;
+	color: #fff;
 	opacity: .6;
 }
 
-/* line 33, ../../scss/modules/_frontpage.scss */
+/* line 36, ../../scss/modules/_frontpage.scss */
 
 #midline {
 	background-color: #9b0000;
 	color: #fff;
 }
 
-/* line 47, ../../scss/modules/_frontpage.scss */
+/* line 50, ../../scss/modules/_frontpage.scss */
 
 .midline-box {
 	margin: .5em 0;
 	padding: 1em 2em;
 }
 
-/* line 52, ../../scss/modules/_frontpage.scss */
+/* line 55, ../../scss/modules/_frontpage.scss */
 
 #social-links {
 	text-align: right;
@@ -2462,7 +2468,7 @@ h3 {
 	font-size: .75em;
 }
 
-/* line 57, ../../scss/modules/_frontpage.scss */
+/* line 60, ../../scss/modules/_frontpage.scss */
 
 #social-links li {
 	display: inline;
@@ -2470,50 +2476,50 @@ h3 {
 	vertical-align: top;
 }
 
-/* line 61, ../../scss/modules/_frontpage.scss */
+/* line 64, ../../scss/modules/_frontpage.scss */
 
 #social-links li a {
 	color: #fff;
 }
 
-/* line 76, ../../scss/modules/_frontpage.scss */
+/* line 79, ../../scss/modules/_frontpage.scss */
 
 .content-box {
 	margin: 0 2em;
 }
 
-/* line 80, ../../scss/modules/_frontpage.scss */
+/* line 83, ../../scss/modules/_frontpage.scss */
 
 .community-tap,
 .community-tap h3 {
 	text-align: right;
 }
 
-/* line 86, ../../scss/modules/_frontpage.scss */
+/* line 89, ../../scss/modules/_frontpage.scss */
 
 #news-items li {
 	margin: .5em 0;
 }
 
-/* line 88, ../../scss/modules/_frontpage.scss */
+/* line 91, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 {
 	margin-bottom: .1em;
 }
 
-/* line 90, ../../scss/modules/_frontpage.scss */
+/* line 93, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a {
 	color: #fff;
 }
 
-/* line 92, ../../scss/modules/_frontpage.scss */
+/* line 95, ../../scss/modules/_frontpage.scss */
 
 #news-items li h4 a:hover {
 	color: #e8e8e8;
 }
 
-/* line 97, ../../scss/modules/_frontpage.scss */
+/* line 100, ../../scss/modules/_frontpage.scss */
 
 #news-items li p {
 	margin-top: 0.2em;
@@ -2521,13 +2527,13 @@ h3 {
 	font-size: 0.9em;
 }
 
-/* line 102, ../../scss/modules/_frontpage.scss */
+/* line 105, ../../scss/modules/_frontpage.scss */
 
 #news-items li:nth-child(n+2) { /* Put a top border on every LI except the first */
 	border-top: 1px solid #680000;
 }
 
-/* line 106, ../../scss/modules/_frontpage.scss */
+/* line 109, ../../scss/modules/_frontpage.scss */
 
 #news-items li time {
 	font-size: .8em;
@@ -2536,32 +2542,32 @@ h3 {
 	color: #680000;
 }
 
-/* line 115, ../../scss/modules/_frontpage.scss */
+/* line 118, ../../scss/modules/_frontpage.scss */
 
 div.event-list .start-date,
 div.event-list .end-date {
 	background-color: inherit;
 }
 
-/* line 119, ../../scss/modules/_frontpage.scss */
+/* line 122, ../../scss/modules/_frontpage.scss */
 
 div.event-list .event-title h3 {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 123, ../../scss/modules/_frontpage.scss */
+/* line 126, ../../scss/modules/_frontpage.scss */
 
 .event-title a {
 	color: #fff;
 }
 
-/* line 125, ../../scss/modules/_frontpage.scss */
+/* line 128, ../../scss/modules/_frontpage.scss */
 
 .event-title a:hover {
 	color: #e8e8e8;
 }
 
-/* line 130, ../../scss/modules/_frontpage.scss */
+/* line 133, ../../scss/modules/_frontpage.scss */
 
 .beer-culture {
 	background-attachment: fixed;
@@ -2569,17 +2575,17 @@ div.event-list .event-title h3 {
 	padding-top: 1em;
 }
 
-/* line 134, ../../scss/modules/_frontpage.scss */
+/* line 137, ../../scss/modules/_frontpage.scss */
 
 .beer-culture h1 {
 	margin-top: 0;
 }
 
-/* line 137, ../../scss/modules/_frontpage.scss */
+/* line 140, ../../scss/modules/_frontpage.scss */
 
 .beer-culture .content-box {
 	background-color: rgba(255, 255, 255, 0.7);
-	color: #333333;
+	color: #000;
 	border-radius: 4px;
 	padding: .5em;
 	margin-bottom: .5em;
@@ -2602,7 +2608,7 @@ div.event-list .event-title h3 {
 /* line 8, ../../scss/modules/_locator.scss */
 
 .locator .address-search {
-	color: #333333;
+	color: #fff;
 }
 
 /* line 10, ../../scss/modules/_locator.scss */
@@ -2619,13 +2625,15 @@ div.event-list .event-title h3 {
 	border-bottom-left-radius: 0;
 	margin-bottom: 14px;
 	width: 25%;
+	font-weight: bold;
 }
 
-/* line 22, ../../scss/modules/_locator.scss */
+/* line 23, ../../scss/modules/_locator.scss */
 
 .locator .current-location button {
 	max-width: 430px;
 	width: 100%;
+	font-weight: bold;
 }
 
 /* line 1, ../../scss/modules/_posts.scss */
@@ -2969,7 +2977,7 @@ div.event-list .event-title h3 {
 /* line 44, ../../scss/breakpoints/_768up.scss */
 
 .nav ul {
-	background: #333333;
+	background: #000;
 	margin-top: 0;
 }
 
@@ -3138,7 +3146,7 @@ div.event-list .event-title h3 {
 
 @media (min-width: 768px) {
 
-/* line 43, ../../scss/modules/_frontpage.scss */
+/* line 46, ../../scss/modules/_frontpage.scss */
 
 #midline > div:nth-child(-n+2) .midline-box {
 	border-right: 2px solid #680000;
@@ -3391,19 +3399,19 @@ h3 {
 
 @media (max-width: 768px) {
 
-/* line 38, ../../scss/modules/_frontpage.scss */
+/* line 41, ../../scss/modules/_frontpage.scss */
 
 #midline > div:nth-child(-n+2) .midline-box {
 	border-bottom: 1px solid #680000;
 }
 
-/* line 68, ../../scss/modules/_frontpage.scss */
+/* line 71, ../../scss/modules/_frontpage.scss */
 
 #logo #brand {
 	margin-left: 0;
 }
 
-/* line 71, ../../scss/modules/_frontpage.scss */
+/* line 74, ../../scss/modules/_frontpage.scss */
 
 #social-links {
 	float: left;

@@ -6,7 +6,7 @@
 		padding: .5em;
 	}
 	.address-search {
-		color: $black;
+		color: $white;
 		input {
 			display: inline-block;
 			width: 75%;
@@ -16,12 +16,14 @@
 			border-bottom-left-radius: 0;
 			margin-bottom: 14px;
 			width: 25%;
+			font-weight: bold;
 		}
 	}
 	.current-location {
 		button {
 			max-width: 430px;
 			width: 100%;
+			font-weight: bold;
 		}
 	}
 }

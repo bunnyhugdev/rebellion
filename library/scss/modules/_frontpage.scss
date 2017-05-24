@@ -1,7 +1,7 @@
 h1, h2, h3 {
 	text-align: center;
 	font-family: $outage;
-	color: $dark-primary-color;
+	color: $primary-brand-color;
 }
 
 @media (min-width: 1029px) {
@@ -17,6 +17,9 @@ h1, h2, h3 {
 	background-size: cover;
 	background-attachment: fixed;
 	#top {
+		h1 {
+			color: $white;
+		}
 		#scroll-down-arrow {
 			position: absolute;
 			left: 45%;
@@ -24,7 +27,7 @@ h1, h2, h3 {
 			width: 10%;
 			text-align: center;
 			font-size: 8em;
-			color: $primary-brand-color;
+			color: $white;
 			opacity: .6;
 		}
 	}

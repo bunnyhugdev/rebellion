@@ -799,7 +799,7 @@ body#tinymce.wp-editor .size-thumbnail {
 }
 /* line 182, ../../scss/editor-style.scss */
 body#tinymce.wp-editor pre {
-  background: #333333;
+  background: #000;
   color: #f8f9fa;
   font-size: 0.9em;
   padding: 1.5em;
